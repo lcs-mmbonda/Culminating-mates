@@ -40,6 +40,7 @@ struct ListItemView: View {
             VStack(alignment: .leading) {
 
                 Text(item.course_name)
+                
 
                     .font(.headline)
 

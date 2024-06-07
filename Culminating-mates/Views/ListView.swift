@@ -7,12 +7,54 @@
 
 import SwiftUI
 
+
+
 struct ListView: View {
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+        
+
+        NavigationStack {
+
+            
+
+            List(allClasses) { currentClass in
+
+                
+
+                NavigationLink {
+
+                    DetailView(item: currentClass)
+
+                } label: {
+
+                    ListItemView(item: currentClass)
+
+                }
+
+                
+
+            }
+
+            .navigationTitle("Available Gr.10 Classes")
+
+                        
+
+        }
+
+        
+
+        
+
+        
+
     }
+
 }
 
+
+
 #Preview {
-    ListView()
+    ContentView(currentTab: .constant(3))
 }

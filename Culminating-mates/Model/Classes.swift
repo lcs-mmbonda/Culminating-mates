@@ -19,17 +19,25 @@ struct Classes: Identifiable {
 }
 
 
-let ap_prep_functions_Block_C = Classes(course_name: "math", image: "func", course_code: "MDM2D", module: 1, teacher_name: "Ms. Taylor")
+let ap_prep_functions_Block_C = Classes(course_name: "Ap prep functions(11)", image: "func", course_code: "MDM3D", module: 1, teacher_name: "Ms. Taylor")
 
-let ap_prep_physics_Block_C = Classes(course_name: "physics", image: "func", course_code: "PS453", module: 1, teacher_name: "M. Braeckman")
+let ap_prep_physics_Block_C = Classes(course_name: "Ap prep Physics(11)", image: "Physics", course_code: "PHS3D", module: 1, teacher_name: "M. Braeckman")
 
-let ap_prep_econ_Block_C = Classes(course_name: "econ", image: "func", course_code: "EC980", module: 1, teacher_name: "M. Lee")
+let english_Block_C = Classes(course_name: "English(10)", image: "English", course_code: "ENG2D", module: 1, teacher_name: "M. Lee")
 
+let math_Block_C = Classes(course_name: "Principle of Math(10)", image: "math", course_code: "MPM2D", module: 1, teacher_name: "Ms. Sparkman")
+
+let french_Block_C = Classes(course_name: "Core french(10)", image: "French", course_code: "FDF2D", module: 1, teacher_name: "M. Kayembe")
+
+let compsci_Block_C = Classes(course_name: "Intro CompSci", image: "Compsci", course_code: "FDF2D", module: 1, teacher_name: "Mr. Gordon")
 
 let allClasses = [
-    ap_prep_econ_Block_C,
+    english_Block_C,
     ap_prep_physics_Block_C,
-    ap_prep_functions_Block_C
+    ap_prep_functions_Block_C,
+    math_Block_C,
+    french_Block_C,
+    compsci_Block_C
 
 
 

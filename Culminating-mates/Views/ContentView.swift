@@ -8,17 +8,74 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    
+
+    @Binding var currentTab: Int
+
+    
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+
+        TabView(selection: $currentTab) {
+
+            Text("What's your full name?")
+                .tabItem {
+
+                    Image(systemName: "person.crop.circle.fill")
+
+                    Text("Account")
+
+                }
+
+                .tag(1)
+
+            
+
+
+            ListView()
+
+                .tabItem {
+
+                    Image(systemName: "books.vertical.fill")
+
+                    Text("Courses")
+
+                }
+
+                .tag(2)
+                
+            
+            Text("My Matches")
+            
+                .tabItem {
+
+                    Image(systemName: "person.line.dotted.person")
+
+                    Text("My matches")
+
+                }
+
+                .tag(3)
+
+            
+
+                
+
         }
-        .padding()
+
+        .accentColor(.red)
+
+        .preferredColorScheme(.light)
+
     }
+
 }
 
+
+
 #Preview {
-    ContentView()
+
+    ContentView(currentTab: .constant(3))
+
 }

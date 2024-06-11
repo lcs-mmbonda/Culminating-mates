@@ -13,7 +13,7 @@ struct Culminating_matesApp: App {
     @State var currentTab: Int = 1
     var body: some Scene {
         WindowGroup {
-            ContentView(currentTab: $currentTab)
+            LandingView(currentTab: $currentTab)
         }
     }
 }

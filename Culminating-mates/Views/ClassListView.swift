@@ -7,54 +7,29 @@
 
 import SwiftUI
 
-
-
-struct ListView: View {
+struct ClassListView: View {
 
     var body: some View {
 
-        
-
         NavigationStack {
 
-            
-
             List(allClasses) { currentClass in
-
-                
-
                 NavigationLink {
-
-                    DetailView(item: currentClass)
-
+                    ClassDetailView(item: currentClass)
                 } label: {
-
-                    ListItemView(item: currentClass)
-
+                    ClassListItemView(item: currentClass)
                 }
 
-                
-
             }
-
             .navigationTitle("Available Gr.10 Classes")
-
                         
 
         }
-
-        
-
-        
-
-        
 
     }
 
 }
 
-
-
 #Preview {
-    ContentView(currentTab: .constant(3))
+    LandingView(currentTab: .constant(3))
 }

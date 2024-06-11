@@ -12,6 +12,7 @@ import SwiftUI
 struct DetailView: View {
     @State private var mod1: Bool = false
     @State private var mod2: Bool = false
+
     
     let item: Classes
     
@@ -26,7 +27,7 @@ struct DetailView: View {
                 
                     .padding(.horizontal)
                 
-                Text("Pre-AP Functions is a high school mathematics course designed to prepare students for the rigor of Advanced Placement (AP) calculus and other higher-level math courses. This course focuses on deepening students' understanding of algebraic concepts and introducing them to functions and their properties. ")
+                Text(item.description)
                     .padding(.horizontal)
                 
                 Toggle("Do you have this class mod 1?", isOn: $mod1)

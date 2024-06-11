@@ -19,19 +19,8 @@ struct ContentView: View {
 
         TabView(selection: $currentTab) {
 
-            Text("What's your full name?")
-                .tabItem {
 
-                    Image(systemName: "person.crop.circle.fill")
-
-                    Text("Account")
-
-                }
-
-                .tag(1)
-
-            
-
+        
 
             ListView()
 

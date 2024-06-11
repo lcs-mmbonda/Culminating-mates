@@ -14,7 +14,7 @@ struct AddSessionView: View {
     @State private var teacher: String = ""
     @State private var subject: Int = 0
     @State private var dateAvailable =  Date()
-    @State private var review: String = ""
+    @State private var mateMessage: String = ""
     
     
     
@@ -33,6 +33,11 @@ struct AddSessionView: View {
             }
             Section(header: Text("Booking Details")) {
                 DatePicker("Date Available ", selection: $dateAvailable, in: Date()...)
+            }
+            
+            Section(header: Text("Optional Message for studymate")) {
+                TextEditor(text: $mateMessage)
+                    .frame(height: 200)
             }
             
             

@@ -46,17 +46,6 @@ struct ContentView: View {
                 .tag(2)
                 
             
-            Text("My Matches")
-            
-                .tabItem {
-
-                    Image(systemName: "person.line.dotted.person")
-
-                    Text("My matches")
-
-                }
-
-                .tag(3)
 
             
 

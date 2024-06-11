@@ -22,16 +22,18 @@ struct AddSessionView: View {
     //Mark: Computed properties
     var body: some View {
         Form {
-            Section(header: Text("Book Details")) {
+            Section(header: Text("Session Details")) {
                 
-                TextField("Title", text: $title)
-                TextField("Author", text: $author)
-                Picker("Genre", selection: $genre){
-                    Text("Romance").tag(1)
-                    Text("Science Fiction").tag(2)
+                TextField("Name", text: $title)
+                TextField("Teacher", text: $author)
+                Picker("Subject", selection: $genre){
+                    Text("Science").tag(1)
+                    Text("English").tag(2)
                 }
                 
             }
+            
+            
         }
     }
 }

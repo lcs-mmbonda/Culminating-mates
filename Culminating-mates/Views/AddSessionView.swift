@@ -10,12 +10,10 @@ import SwiftUI
 struct AddSessionView: View {
     
     // Mark: Stored properties
-    @State private var title: String = ""
-    @State private var author: String = ""
-    @State private var genre: Int = 0
-    @State private var dateStarted:  Date = Date()
-    @State private var dataFinished: Date = Date()
-    @State private var starRating: Int = 0
+    @State private var name: String = ""
+    @State private var teacher: String = ""
+    @State private var subject: Int = 0
+    @State private var dateAvailable:  Date = Date()
     @State private var review: String = ""
     
     
@@ -24,13 +22,17 @@ struct AddSessionView: View {
         Form {
             Section(header: Text("Session Details")) {
                 
-                TextField("Name", text: $title)
-                TextField("Teacher", text: $author)
-                Picker("Subject", selection: $genre){
+                TextField("Name", text: $name)
+                TextField("Teacher", text: $teacher)
+                Picker("Subject", selection: $subject){
                     Text("Science").tag(1)
                     Text("English").tag(2)
                 }
                 
+            }
+            Section(header: Text("Booking Details")) {
+                DatePicker("Date Available ", selection:
+                $dateAvailable)
             }
             
             

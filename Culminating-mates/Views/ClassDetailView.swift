@@ -13,7 +13,7 @@ struct ClassDetailView: View {
     
     @State private var isAddSessionViewShowing = false
     
-    let item: Classes
+    let item: Class
     
     var body: some View {
         ScrollView {

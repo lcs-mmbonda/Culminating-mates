@@ -11,7 +11,7 @@ import SwiftUI
 
 struct ClassListItemView: View {
 
-    let item: Classes
+    let item: Class
     
     var body: some View {
         HStack {

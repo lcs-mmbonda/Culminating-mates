@@ -13,8 +13,9 @@ struct AddSessionView: View {
     @State private var name: String = ""
     @State private var teacher: String = ""
     @State private var subject: Int = 0
-    @State private var dateAvailable:  Date = Date()
+    @State private var dateAvailable =  Date()
     @State private var review: String = ""
+    
     
     
     //Mark: Computed properties
@@ -31,9 +32,9 @@ struct AddSessionView: View {
                 
             }
             Section(header: Text("Booking Details")) {
-                DatePicker("Date Available ", selection:
-                $dateAvailable)
+                DatePicker("Date Available ", selection: $dateAvailable, in: Date()...)
             }
+            
             
             
         }

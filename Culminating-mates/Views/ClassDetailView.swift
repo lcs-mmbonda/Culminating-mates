@@ -41,10 +41,9 @@ struct ClassDetailView: View {
             Toggle("Do you have this class mod 2?", isOn: $mod2)
                 .padding()
             
-            List {
-                Text("A")
-                Text("B")
-                Text("AC")
+            List(sessions) { Session in
+                Text(Session.name)
+                
             }
             
             

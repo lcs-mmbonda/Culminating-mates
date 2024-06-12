@@ -16,6 +16,7 @@
 		5883D11A2C0F554100A8D953 /* ClassDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5883D1192C0F554100A8D953 /* ClassDetailView.swift */; };
 		5883D11C2C1209B700A8D953 /* ClassListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5883D11B2C1209B700A8D953 /* ClassListView.swift */; };
 		5883D11E2C187ED900A8D953 /* AddSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5883D11D2C187ED900A8D953 /* AddSessionView.swift */; };
+		5883D1202C19F5C000A8D953 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5883D11F2C19F5C000A8D953 /* Session.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		5883D1192C0F554100A8D953 /* ClassDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDetailView.swift; sourceTree = "<group>"; };
 		5883D11B2C1209B700A8D953 /* ClassListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassListView.swift; sourceTree = "<group>"; };
 		5883D11D2C187ED900A8D953 /* AddSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionView.swift; sourceTree = "<group>"; };
+		5883D11F2C19F5C000A8D953 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				5883D1112C0F523E00A8D953 /* Class.swift */,
+				5883D11F2C19F5C000A8D953 /* Session.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				5883D1042C0F51C900A8D953 /* LandingView.swift in Sources */,
 				5883D1022C0F51C900A8D953 /* Culminating_matesApp.swift in Sources */,
 				5883D11C2C1209B700A8D953 /* ClassListView.swift in Sources */,
+				5883D1202C19F5C000A8D953 /* Session.swift in Sources */,
 				5883D1122C0F523E00A8D953 /* Class.swift in Sources */,
 				5883D11A2C0F554100A8D953 /* ClassDetailView.swift in Sources */,
 				5883D1162C0F541A00A8D953 /* ClassListItemView.swift in Sources */,

@@ -15,6 +15,9 @@ struct ClassDetailView: View {
     
     let item: Class
     
+    // Store a list of study sessions in memory
+//    @State private var sessions: [Session] = []
+    
     var body: some View {
         ScrollView {
             

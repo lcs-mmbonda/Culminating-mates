@@ -12,7 +12,7 @@ struct AddSessionView: View {
     // Mark: Stored properties
     @State private var name: String = ""
     @State private var teacher: String = ""
-    @State private var subject: Int = 0
+    @State private var module: Int = 0
     @State private var dateAvailable =  Date()
     @State private var mateMessage: String = ""
     
@@ -26,9 +26,9 @@ struct AddSessionView: View {
                     
                     TextField("Name", text: $name)
                     TextField("Teacher", text: $teacher)
-                    Picker("Subject", selection: $subject){
-                        Text("Science").tag(1)
-                        Text("English").tag(2)
+                    Picker("Module", selection: $module){
+                        Text("Odd (1, 3..").tag(1)
+                        Text("Even (2, 4..").tag(2)
                     }
                     
                 }

@@ -14,6 +14,9 @@ struct ClassDetailView: View {
     //Whether the sheet to add a new review is showing
     @State private var isAddSessionViewShowing = false
     
+    //Source of truth for our list of reviews
+    @State private var sessions: [Session] = exampleSessions
+    
     
     
     let item: Class
@@ -22,7 +25,7 @@ struct ClassDetailView: View {
 //    @State private var sessions: [Session] = []
     
     var body: some View {
-        ScrollView {
+        VStack {
             
             Image(item.image)
                 .resizable()
@@ -37,6 +40,13 @@ struct ClassDetailView: View {
             
             Toggle("Do you have this class mod 2?", isOn: $mod2)
                 .padding()
+            
+            List {
+                Text("A")
+                Text("B")
+                Text("AC")
+            }
+            
             
         }
         .toolbar {

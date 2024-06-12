@@ -13,11 +13,14 @@ struct AddSessionView: View {
     @State private var name: String = ""
     @State private var teacher: String = ""
     @State private var module: Int = 0
-    @State private var subject: Int = 0
+    @State private var subject: String = ""
     @State private var dateAvailable =  Date()
     @State private var mateMessage: String = ""
     
+    //Whether the sheet to add a new review is showing
     @Binding var isShowing: Bool
+    
+
     
     //Mark: Computed properties
     var body: some View {
@@ -27,10 +30,13 @@ struct AddSessionView: View {
                     
                     TextField("Name", text: $name)
                     TextField("Teacher", text: $teacher)
+                    
                     Picker("Subject", selection: $module){
-                        Text("Science 10").tag(1)
-                        Text("Math 10").tag(2)
-                        Text("Physics 11").tag(3)}
+                        Text("Science 10").tag("Science 10")
+                        Text("Math 10").tag("Math 10")
+                        Text("Physics 11").tag("Physics 10")
+                    }
+                    
                     Picker("Module", selection: $module){
                         Text("Odd (1, 3..").tag(1)
                         Text("Even (2, 4..").tag(2)

@@ -11,7 +11,10 @@ struct ClassDetailView: View {
     @State private var mod1: Bool = false
     @State private var mod2: Bool = false
     
+    //Whether the sheet to add a new review is showing
     @State private var isAddSessionViewShowing = false
+    
+    
     
     let item: Class
     

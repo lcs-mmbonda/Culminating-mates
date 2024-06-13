@@ -12,7 +12,7 @@ struct AddSessionView: View {
     // Mark: Stored properties
     @State private var name: String = ""
     @State private var teacher: String = ""
-    @State private var module: Int = 0
+    @State private var module: String = ""
     @State private var subject: String = ""
     @State private var dateAvailable =  Date()
     @State private var mateMessage: String = ""
@@ -74,6 +74,7 @@ struct AddSessionView: View {
                             mateMessage: mateMessage
                         )
                         sessions.append(newSession)
+                        
                         
                         // Hide the sheet
                         isShowing = false

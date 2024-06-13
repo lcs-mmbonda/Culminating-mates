@@ -13,7 +13,7 @@ struct Session: Identifiable {
     let name: String
     let teacher: String
     let subject: String
-    let module: Int
+    let module: String
     let dateAvailable: Date
     let mateMessage: String
     
@@ -23,7 +23,7 @@ let physics = Session(
     name: "Add Session using plus (example attached)",
     teacher: "Braeckman",
     subject: "Pre AP Physics 11",
-    module: 1,
+    module: "Odd",
     dateAvailable: Date(timeIntervalSinceNow: TimeInterval.random(in: 0...1000000)),
     mateMessage: "Looking forward to studying together!")
 

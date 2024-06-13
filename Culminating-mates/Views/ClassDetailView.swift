@@ -43,6 +43,7 @@ struct ClassDetailView: View {
             
             List(sessions) { Session in
                 Text(Session.name)
+                //Text(Session.dateAvailable)
                 
             }
             

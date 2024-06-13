@@ -20,32 +20,13 @@ struct Session: Identifiable {
 }
 
 let physics = Session(
-    name: "Physics Study Group",
+    name: "Add Session using plus (example attached)",
     teacher: "Braeckman",
     subject: "Pre AP Physics 11",
     module: 1,
     dateAvailable: Date(timeIntervalSinceNow: TimeInterval.random(in: 0...1000000)),
     mateMessage: "Looking forward to studying together!")
 
-let math = Session(
-    name: "Math Study Group",
-    teacher: "Sparkman",
-    subject: "Math 10",
-    module: 2,dateAvailable: Date(timeIntervalSinceNow: TimeInterval.random(in: 0...1000000)),
-    mateMessage: "Let's conquer math together!"
-)
-
-let english = Session(
-    name: "English Study Group",
-    teacher: "Fraser",
-    subject: "English 10",
-    module: Int.random(in: 1...10),
-    dateAvailable: Date(timeIntervalSinceNow: TimeInterval.random(in: 0...1000000)),
-    mateMessage: "Excited to dive into literature!"
-)
-
 let exampleSessions = [
-    physics,
-    math,
-    english
+    physics
 ]

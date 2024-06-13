@@ -17,8 +17,12 @@ struct AddSessionView: View {
     @State private var dateAvailable =  Date()
     @State private var mateMessage: String = ""
     
-    //Whether the sheet to add a new review is showing
+    //Allows us to dismiss the sheet
     @Binding var isShowing: Bool
+    
+    //Obtain a reference from the source of truth for our session
+    @Binding var sessions: [Session]
+    
     
 
     
@@ -59,6 +63,18 @@ struct AddSessionView: View {
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
+                        
+                        //Add new session
+                        let newSession = Session(
+                            name: name,
+                            teacher: teacher,
+                            subject: subject,
+                            module: module,
+                            dateAvailable: dateAvailable,
+                            mateMessage: mateMessage
+                        )
+                        sessions.append(newSession)
+                        
                         // Hide the sheet
                         isShowing = false
                         // Save the new study session
@@ -78,5 +94,8 @@ struct AddSessionView: View {
 
 
 #Preview {
-    AddSessionView(isShowing: Binding.constant(true))
+    AddSessionView(
+        isShowing: Binding.constant(true),
+        sessions: Binding.constant(exampleSessions))
+    
 }

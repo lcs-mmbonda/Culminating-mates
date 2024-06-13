@@ -59,7 +59,7 @@ struct ClassDetailView: View {
             }
         }
         .sheet(isPresented: $isAddSessionViewShowing) {
-            AddSessionView(isShowing: $isAddSessionViewShowing)
+            AddSessionView(isShowing: $isAddSessionViewShowing, sessions: $sessions )
                 .presentationDetents([.fraction(0.75)])
         }
         .navigationTitle(item.course_name)

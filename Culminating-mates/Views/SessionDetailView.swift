@@ -26,7 +26,7 @@ struct SessionDetailView: View {
                 HStack {
                     VStack(alignment: .leading) {
                         Group{
-                            Text("module")
+                            Text("Module")
                                 .font(.headline)
                             Text(sessionToShow.module)
                                 .padding(.bottom, 16)
@@ -36,7 +36,7 @@ struct SessionDetailView: View {
                                 .padding(.bottom, 16)
                             Text("Date available")
                                 .font(.headline)
-                            Text("\(sessionToShow.dateAvailable)")
+                            Text(sessionToShow.dateAvailable.formatted(date: .abbreviated, time: .shortened))
                                 .padding(.bottom, 16)
                         }
                         
@@ -56,9 +56,6 @@ struct SessionDetailView: View {
         }
     }
     
-    func formatted(_ date: Date) -> String{
-        return date.formatted(.dateTime.day().month(.wide).year())
-    }
     
     
     

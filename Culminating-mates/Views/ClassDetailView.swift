@@ -41,8 +41,15 @@ struct ClassDetailView: View {
             Toggle("Do you have this class mod 2?", isOn: $mod2)
                 .padding()
             
-            List(sessions) { Session in
-                Text(Session.name)
+            List(sessions) { currentSession in
+                
+                VStack {
+                    Text(currentSession.name)
+                        .bold()
+                    Text(currentSession.dateAvailable.formatted(date: .abbreviated, time: .shortened))
+                        .font(.subheadline)
+
+                }
                 //Text(Session.dateAvailable)
                 
             }

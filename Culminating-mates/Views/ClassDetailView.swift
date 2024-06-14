@@ -44,10 +44,15 @@ struct ClassDetailView: View {
             List(sessions) { currentSession in
                 
                 VStack {
-                    Text(currentSession.name)
-                        .bold()
-                    Text(currentSession.dateAvailable.formatted(date: .abbreviated, time: .shortened))
-                        .font(.subheadline)
+                    NavigationLink {
+                        SessionDetailView(sessionToShow: currentSession)
+                    } label: {
+                        Text(currentSession.name)
+                            .bold()
+                        Text(currentSession.dateAvailable.formatted(date: .abbreviated, time: .shortened))
+                            .font(.subheadline)
+                    }
+
 
                 }
                 //Text(Session.dateAvailable)

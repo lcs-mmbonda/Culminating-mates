@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct LandingView: View {
-
+    
     @Binding var currentTab: Int
-
+    
     var body: some View {
-
+        
         TabView(selection: $currentTab) {
-
             ClassListView()
                 .tabItem {
                     Image(systemName: "books.vertical.fill")
@@ -24,9 +23,9 @@ struct LandingView: View {
         }
         .accentColor(.red)
         .preferredColorScheme(.light)
-
+        
     }
-
+    
 }
 
 #Preview {

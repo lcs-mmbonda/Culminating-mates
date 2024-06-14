@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct ClassListItemView: View {
-
+    
     let item: Class
     
     var body: some View {
@@ -34,15 +34,15 @@ struct ClassListItemView: View {
             }
             
         }
-
+        
     }
-
+    
 }
 
 
 #Preview {
-
+    
     ClassListItemView(item: ap_prep_functions_Block_C)
         .padding()
-
+    
 }

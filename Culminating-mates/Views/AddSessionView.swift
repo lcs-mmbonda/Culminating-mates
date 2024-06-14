@@ -23,9 +23,6 @@ struct AddSessionView: View {
     //Obtain a reference from the source of truth for our session
     @Binding var sessions: [Session]
     
-    
-
-    
     //Mark: Computed properties
     var body: some View {
         NavigationStack {
@@ -42,14 +39,11 @@ struct AddSessionView: View {
                         Text("English 10").tag("English 10")
                         Text("Intro Compsci 11").tag("Intro Compsci 11")
                         Text("Pre ap functions 11").tag("Pre ap functions 11")
-                        
                     }
-                    
                     Picker("Module", selection: $module){
                         Text("Odd (1, 3..").tag("Odd (1, 3..")
                         Text("Even (2, 4..").tag("Even (2, 4..")
                     }
-                    
                 }
                 Section(header: Text("Booking Details")) {
                     DatePicker("Date Available ", selection: $dateAvailable, in: Date()...)
@@ -59,9 +53,6 @@ struct AddSessionView: View {
                     TextEditor(text: $mateMessage)
                         .frame(height: 200)
                 }
-                
-                
-                
             }
             .navigationTitle("Add Session")
             .toolbar {
@@ -78,8 +69,6 @@ struct AddSessionView: View {
                             mateMessage: mateMessage
                         )
                         sessions.append(newSession)
-                        
-                        
                         // Hide the sheet
                         isShowing = false
                         // Save the new study session
@@ -87,20 +76,14 @@ struct AddSessionView: View {
                     } label: {
                         Text("Done")
                     }
-
                 }
             }
         }
-        
-        
-        
     }
 }
-
 
 #Preview {
     AddSessionView(
         isShowing: Binding.constant(true),
         sessions: Binding.constant(exampleSessions))
-    
 }

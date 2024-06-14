@@ -22,7 +22,7 @@ struct ClassDetailView: View {
     let item: Class
     
     // Store a list of study sessions in memory
-//    @State private var sessions: [Session] = []
+    //    @State private var sessions: [Session] = []
     
     var body: some View {
         VStack {
@@ -52,8 +52,8 @@ struct ClassDetailView: View {
                         Text(currentSession.dateAvailable.formatted(date: .abbreviated, time: .shortened))
                             .font(.subheadline)
                     }
-
-
+                    
+                    
                 }
                 //Text(Session.dateAvailable)
                 
@@ -68,7 +68,7 @@ struct ClassDetailView: View {
                 } label:{
                     Image(systemName: "plus")
                 }
-
+                
             }
         }
         .sheet(isPresented: $isAddSessionViewShowing) {

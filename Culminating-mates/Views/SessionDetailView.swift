@@ -18,7 +18,7 @@ struct SessionDetailView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
                 
-                Text("   by \(sessionToShow.name)")
+                Text("by \(sessionToShow.name)")
                     .font(.title2)
                     .foregroundColor(.secondary)
                 

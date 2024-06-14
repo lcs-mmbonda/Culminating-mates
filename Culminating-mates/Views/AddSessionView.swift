@@ -35,15 +35,19 @@ struct AddSessionView: View {
                     TextField("Name", text: $name)
                     TextField("Teacher", text: $teacher)
                     
-                    Picker("Subject", selection: $module){
+                    Picker("Subject", selection: $subject){
                         Text("Science 10").tag("Science 10")
                         Text("Math 10").tag("Math 10")
-                        Text("Physics 11").tag("Physics 10")
+                        Text("Physics 11").tag("Physics 11")
+                        Text("English 10").tag("English 10")
+                        Text("Intro Compsci 11").tag("Intro Compsci 11")
+                        Text("Pre ap functions 11").tag("Pre ap functions 11")
+                        
                     }
                     
                     Picker("Module", selection: $module){
-                        Text("Odd (1, 3..").tag(1)
-                        Text("Even (2, 4..").tag(2)
+                        Text("Odd (1, 3..").tag("Odd (1, 3..")
+                        Text("Even (2, 4..").tag("Even (2, 4..")
                     }
                     
                 }
